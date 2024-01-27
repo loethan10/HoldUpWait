@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody rb;
+    Vector3 playerPosition;
     [SerializeField] float movementSpeed = 7f;
     [SerializeField] float jumpStrength = 5f;
     [SerializeField] bool onGround = true; 
-    [SerializeField] float rotationSpeed;
+    [SerializeField] float rotationSpeed = 5f;
 
     // Start is called before the first frame update
     void Start() {
@@ -20,20 +21,23 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal"); 
         float verticalInput = Input.GetAxis("Vertical");
 
-
-        Vector3 movementDirection = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+        /*
+       Vector3 movementDirection = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
         movementDirection.Normalize();
 
         transform.Translate(movementDirection * movementSpeed * Time.deltaTime, Space.World);
+        */
 
-        //rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
-        //rb.velocity.Normalize();
+        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+        rb.velocity.Normalize();
 
+        /*
         if (movementDirection != Vector3.zero) {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);  
 
         }
+        */
 
         //Programmed in Unity itself
         if (Input.GetButtonDown("Jump") && onGround){ 
