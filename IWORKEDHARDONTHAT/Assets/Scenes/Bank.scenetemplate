@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Bank
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 5cb91c1fbf6584e8ca76d66e30943fc3, type: 3}
+  templateName: 
+  description: 
+  preview: {fileID: 0}
+  dependencies:
+  - dependency: {fileID: 2100000, guid: 23b63a4e99f534176b81f68a0ce6f8e3, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 496165854414234719, guid: 21714e63b79154588b52aff1bd8b8c8f, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: 375d01b97f5a1453199d085992329ff2, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 8532944419919248719, guid: dcdc44c5e368a4634a8b87f6db633df2, type: 3}
+    instantiationMode: 0
+  templatePipeline: {fileID: 0}
+  badge: {fileID: 0}
+  addToDefaults: 0
