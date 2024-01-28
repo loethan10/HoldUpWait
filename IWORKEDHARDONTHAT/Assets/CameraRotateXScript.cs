@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraRotateXScript : MonoBehaviour
 {
-    public float sensitivity = 10f;
+    public float sensitivity = 5f;
     private Vector3 rotate;
     float x;
 

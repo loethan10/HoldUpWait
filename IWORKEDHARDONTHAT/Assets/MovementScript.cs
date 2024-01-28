@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour
 {
     public bool isMoving = false;
-    public float movementSpeed = 20;
+    public float movementSpeed = 10;
     public Rigidbody rb;
     public float jumpAmount = 10;
     public float range = 1f;
@@ -45,7 +45,7 @@ public class MovementScript : MonoBehaviour
 
         ShootRaycast();
 
-        if(Input.GetKeyDown("space") & grounded == true)
+        if(Input.GetKeyDown(KeyCode.Space) & grounded == true)
         {
             rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
         }
