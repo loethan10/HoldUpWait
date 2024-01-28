@@ -5,9 +5,9 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour
 {
     public bool isMoving = false;
-    public float movementSpeed = 10;
+    public float movementSpeed = 5;
     public Rigidbody rb;
-    public float jumpAmount = 10;
+    public float jumpAmount = 4;
     public float range = 1f;
     public bool grounded = false;
     public Camera GroundedCam;
@@ -23,6 +23,7 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * Time.deltaTime * movementSpeed;
