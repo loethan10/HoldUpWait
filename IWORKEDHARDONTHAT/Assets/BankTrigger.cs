@@ -5,14 +5,14 @@ using UnityEngine;
 public class BankTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("PlayerFRFR")){
+            BankManager.instance.ToggleBank();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerExit2D(Collider2D other){
+        if(other.CompareTag("PlayerFRFR")){
+            BankManager.instance.ToggleBank();
+        }
     }
 }
